@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@keyframes fade-in {
+  0%{opacity: 0; top: -100px;}
+  100%{opacity: 1; top: 0px}
+}
+
+@keyframes swipe-in {
+  0%{opacity: 0; right: -100px;}
+  100%{opacity: 1; right: 0px}
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.to-do-list-container {
+  text-align: left;
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 500ms ease-in normal;
+  
+}
+.to-do-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  animation: swipe-in 500ms ease-in normal;
+}
+
+.to-do-item > div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 221px;
+  max-width: 515px;
+}
+
+
+
+button{
+  
+  border-radius: 8px;
+  border: none;
+  transition: all 150ms ease;
+  
+
+}
+
+button:hover{
+  
+  transform: scale(1.05);
+}
+
+.delete-task-btn{
+  color: #585656;
+  background: none;
+}
+
+.delete-task-btn:hover{
+  
+  background: #f1000024;
+  color: #f1000080;
+}
+
+
+.completed-task{
+  text-decoration: line-through;
+  color: #29292989;
+}
+
+.check-task-btn{
+  color: #28dd00;
+  background: none;
+  box-shadow: none;
+}
+
+.check-task-btn:hover{
+  background: #29dd0024
+}
